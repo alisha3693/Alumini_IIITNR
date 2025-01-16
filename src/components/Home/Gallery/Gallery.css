@@ -1,0 +1,56 @@
+#gallery{
+  margin-top: 40px;
+}
+
+.gallery-home-heading{
+    font-size: 60px;
+    font-family: alumni-home;
+    color: #06054D;
+    font-weight: 400;
+    width: 100%;
+    text-align:start;
+}
+
+.text{
+    width: 84vw;
+    margin: auto;
+}
+.slick-dots {
+    bottom: -30px; /* Adjust as needed */
+    border-radius: 50%;
+  }
+  
+  /* Individual dot */
+  .slick-dots li {
+    margin: 0 5px; /* Adjust spacing between dots if needed */
+  }
+  
+  /* Dot button */
+  .slick-dots li button {
+    background-color:#FFFFFF ; /* Default dot color */
+    border-radius: 50%;
+  }
+  
+  /* Active dot */
+  .slick-dots li.slick-active button {
+    background-color: whitesmoke; /* Color of the active dot */
+    border-radius: 50%;
+  }
+  .slider-item {
+    width: 90%;
+  }
+  
+  .slider-item img {
+    width: 100%;
+    border-radius: 0.1rem;
+    padding: 10px;
+    border: 3px solid blue; /* Add border here */
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+  }
+
+  @media (max-width:630px) {
+    .Slider .heading{
+      font-size: 7vw;
+      letter-spacing: 0.1rem;
+    }
+  }
