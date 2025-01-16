@@ -1,0 +1,122 @@
+.hero-section-carousel {
+  width: 100%; /* Make it flexible */
+  max-width: 600px; /* Reduce max width */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(14, 6, 49, 0.8);
+  border-radius: 10px;
+  
+}
+
+.slider-left {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.slider-right {
+  padding: 20px;
+  width: 60%;
+}
+
+.slider-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.slider-graduate {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.slider-desc {
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Arrow Styles */
+.slick-prev, .slick-next {
+  border-radius: 25px;
+}
+
+.slick-prev, .slick-next{
+  content: ''; 
+  color: white; 
+}
+
+.slick-prev:before {
+  font-size: 20px;
+  content: '←'; /* Left arrow */
+  color: #06054D;
+}
+
+.slick-next:before {
+  font-size: 20px;
+  content: '→'; /* Right arrow */
+  color: #06054D;
+}
+
+@media (max-width: 1200px) {
+  .hero-section-carousel {
+    max-width: 85%; /* Adjust for larger screens */
+  }
+  .slider-left {
+    width: 50%; /* Adjust for larger screens */
+  }
+  .slider-right {
+    width: 50%; /* Adjust for larger screens */
+  }
+}
+
+@media (max-width: 760px) {
+  .slider-contain {
+    flex-direction: column; /* Stack the left and right sections */
+  }
+  .slider-container {
+    width: 90%; /* Take up more width */
+  }
+  .slider-left,
+  .slider-right {
+    width: 100%; /* Full width for mobile */
+  }
+  .slider-img {
+    max-height: 200px; /* Adjust image height */
+  }
+  .slider-name {
+    font-size: 20px; /* Adjust name size */
+  }
+  .slider-graduate {
+    font-size: 16px; /* Adjust text size */
+  }
+  .slider-desc {
+    font-size: 14px; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-name {
+    font-size: 18px; /* Further adjust text size */
+  }
+  .slider-graduate {
+    font-size: 14px;
+  }
+  .slider-desc {
+    font-size: 12px;
+  }
+}

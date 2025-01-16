@@ -1,0 +1,125 @@
+.moto-section {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px; /* Full viewport height */
+  }
+  
+  .moto-section-img {
+    height: 100%; 
+    position: relative;
+    width: 100%;
+  }
+  
+  .moto-section-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+  
+  .overlay-img-moto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(6, 5, 77, 0.4); /* Adjust opacity for better visibility */
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Add some padding to prevent text from touching the edges */
+  }
+  
+  .moto-text {
+    font-family: 'alumni-home', sans-serif;
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .moto-text-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center button horizontally */
+    width: 100%;
+    margin-top: 20px; /* Add spacing from text */
+  }
+  
+  .moto-text-button button {
+    font-family: 'alumni-home', sans-serif;
+    border: 0;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    background-color: #6A79FF;
+    border-radius: 28px;
+    padding: 10px 20px; /* Add horizontal padding */
+    cursor: pointer; /* Add cursor pointer for button */
+  }
+  
+  /* Adjust text size for medium-sized screens */
+  @media (max-width: 1000px) {
+    .moto-text {
+      font-size: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  
+    .moto-text-button button {
+      font-size: 30px;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Adjust for smaller screens like phones */
+  @media (max-width: 700px) {
+    .moto-text {
+      font-size: 30px;
+      letter-spacing: 1px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .moto-text-button button {
+      font-size: 20px;
+      padding: 6px 15px; /* Smaller padding on mobile */
+    }
+  }
+  
+  /* Further optimize for very small screens */
+  @media (max-width: 500px) {
+    .moto-text {
+      font-size: 24px; /* Smaller font for very small screens */
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .moto-text-button button {
+      font-size: 18px;
+      padding: 6px 12px;
+    }
+
+    .moto-section{
+        height: 250px;
+    }
+  }
+
+  @media (max-width:560px) {
+    .moto-section{
+        height: 250px;
+    }
+  }
+  

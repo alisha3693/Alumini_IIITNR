@@ -1,0 +1,95 @@
+@font-face {
+    font-family: alumni-home;
+    src: url('./assets/Font/BebasNeue-Regular.ttf');
+  }
+  
+  .hero-section {
+    height: 100svh; /* Use vh instead of svh for consistent height across browsers */
+    background-image: url('../../../assets/Images/Bg/Home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-direction: column;
+    position: relative; /* Relative positioning for child absolute positioning */
+  }
+  
+  .hero-section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .hero-section-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .hero-section-text-1 {
+    font-family: Montserrat;
+    color: #06054D;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+  
+  .hero-section-text-2 {
+    font-family: alumni-home;
+    color: #06054D;
+    font-weight: 900;
+    font-size: 85px;
+  }
+  
+  .explore-container {
+    position: absolute;
+    bottom: 10px; /* Position the container close to the bottom */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .explore-text {
+    color: white;
+    font-size: 24px;
+    font-family: Montserrat;
+    position: absolute;
+    z-index: 1; /* Ensure the text is on top of the SVG */
+  }
+  
+  .explore-container svg {
+    position: relative;
+    z-index: 0; /* Ensure the SVG is behind the text */
+  }
+  
+  @media (max-width: 760px) {
+    .hero-section-text-1 {
+      font-size: 18px;
+    }
+    .hero-section-text-2 {
+      font-size: 60px;
+    }
+    .explore-text {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .hero-section-text-1 {
+      font-size: 15px;
+    }
+    .hero-section-text-2 {
+      font-size: 50px;
+    }
+    .explore-text {
+      font-size: 16px;
+    }
+  }
+  

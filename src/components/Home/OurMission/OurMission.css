@@ -1,0 +1,31 @@
+.our-mission{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.our-mission-heading{
+    font-family: alumni-home;
+    border-bottom: 5px solid #06054D;
+    border-radius: 16px;
+    font-size: 50px;
+    color: #06054D;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.our-mission-desc{
+    font-family: alumni-para;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.mission-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+}

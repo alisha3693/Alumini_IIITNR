@@ -1,0 +1,40 @@
+.our-mission-cards{
+    height: 350px;
+    width: 300px;
+    background-color: #F9F6FF;
+    padding: 5px;
+    border-radius: 16px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.our-mission-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mission-cards-head-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mission-heading{
+    color: #06054D;
+    font-family: alumni-para;
+    font-weight:700;
+    border-bottom: 2px solid #06054D;
+    margin-bottom: 10px;
+}
+
+.mission-card-desc{
+    text-align: center;
+}
+
+.mission-card-button{
+    font-family: alumni-para;
+}
