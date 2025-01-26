@@ -13,6 +13,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import { NavLink } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Alumni Directory', 'Events', 'Contribute', 'Newsroom', 'Login'];
@@ -41,7 +43,7 @@ function DrawerAppBar(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-
+  const {isAuthenticated} = useAuthStore()
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -86,11 +88,24 @@ function DrawerAppBar(props) {
               gap:"10px"
             }}
           >
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'white', fontWeight:"700" }}>
-                {item}
+              <Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Home
               </Button>
-            ))}
+              <Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Alumni Directory
+              </Button>
+              <Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Events
+              </Button>
+              <Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Contribute
+              </Button>
+              <Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Newsroom
+              </Button>
+              {!isAuthenticated && <NavLink to="/login"><Button  sx={{ color: 'white', fontWeight:"700" }}>
+                Login
+              </Button></NavLink>}
           </Box>
         </Toolbar>
       </AppBar>
