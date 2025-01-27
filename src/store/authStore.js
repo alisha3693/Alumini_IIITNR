@@ -27,9 +27,11 @@ export const useAuthStore = create((set) => ({
         try{
             const response = await axios.post(`${API_URL}/verify-email`, {code});
             set({isLoading:false, isAuthenticated:true, user: response.data.user});
+            return response.data
         }catch(error){
             set({isLoading:false, error: error.message});
             console.log(error);
+            return error.response?.data || { success: false, message: "An error occurred" };
         }
     },
 
@@ -60,5 +62,17 @@ export const useAuthStore = create((set) => ({
             set({isCheckingAuth:false, isAuthenticated:false, user:null});
             // console.log(error);     
         }
+    },
+
+    logout: async ()=>{
+        set({isLoading:true, error:null});
+        try{
+            const response = await axios.post(`${API_URL}/logout`, null, {withCredentials:true});
+            set({isLoading:false, isAuthenticated:false, user:null});
+        }catch(error){
+            set({isLoading:false, error: error.message});
+            console.log(error);
+            throw error;
+        }        
     }
 }))

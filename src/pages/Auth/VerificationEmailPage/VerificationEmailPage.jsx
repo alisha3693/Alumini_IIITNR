@@ -3,25 +3,35 @@ import "./VerificationEmailPage.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuthStore } from "../../../store/authStore";
+import { useNavigate } from "react-router-dom";
 
 export default function VerificationEmailPage() {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const inputsRef = useRef([]);
 
   const {isLoading, error, verifyEmail} = useAuthStore();
-
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form default submission
     const verificationCode = code.join(""); // Combine the 6 digits into a single string
     
     if (verificationCode.length === 6) {
-        await verifyEmail(verificationCode);
-        if(!error && !isLoading){
+        const response = await verifyEmail(verificationCode);
+        if(response.success===true){
             toast.success("Email verified successfully!", {
                 position: "top-right",
               });
+            navigate("/");
+        }else{
+          toast.error("Invalid Verificaton Code!", {
+            position: "top-right",
+          });
         }
+    }else if(error){
+      toast.error("Invalid Verificaton Code!", {
+            position: "top-right",
+          });
     }
 }
   

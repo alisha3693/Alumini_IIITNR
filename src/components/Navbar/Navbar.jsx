@@ -43,7 +43,7 @@ function DrawerAppBar(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-  const {isAuthenticated} = useAuthStore()
+  const {isAuthenticated, logout} = useAuthStore()
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -106,6 +106,11 @@ function DrawerAppBar(props) {
               {!isAuthenticated && <NavLink to="/login"><Button  sx={{ color: 'white', fontWeight:"700" }}>
                 Login
               </Button></NavLink>}
+              {isAuthenticated===true && 
+              <Button  sx={{ color: 'white', fontWeight:"700" }} onClick={()=>{logout()}}>
+              Logout
+              </Button>
+              }
           </Box>
         </Toolbar>
       </AppBar>
